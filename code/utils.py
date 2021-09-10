@@ -107,8 +107,8 @@ df$label2 <- ordered(df$label2, levels = c("No Advice", "Weak Advice", "Strong A
 ggplot(df, aes(x=rel_loc, color = label2, fill = label2)) +
   geom_histogram(alpha=0.5, bins = 5, boundary= 0) +
   facet_grid(. ~ label2, ) +
-  scale_color_manual(values=c("#7CAE00", "#00BFC4","#F8766D")) +
-  scale_fill_manual(values=c("#7CAE00", "#00BFC4","#F8766D")) +
+  scale_color_manual(values=c('darkgray', 'darkgray', 'darkgray')) +
+  scale_fill_manual(values=c('lightgray', 'lightgray', 'lightgray')) +
   labs(x="Location", y = "Number of sentences") + 
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size=10),
         axis.text.y = element_text(size=10),
@@ -116,8 +116,10 @@ ggplot(df, aes(x=rel_loc, color = label2, fill = label2)) +
         axis.title=element_text(size=12)) +
   xlim(c(0, 1)) + ylim(c(0, 1000)) + #theme_classic() +
   theme(legend.position = "none")
-  
-#ggsave('/var/www/html/a.pdf', plot=last_plot(), width=4, height=3)
+
+figname = '/tmp/a.pdf'
+ggsave(figname, plot=last_plot(), width=4, height=3)
+embedFonts(figname, outfile = figname)
 """
 def plot_advice_position_distribution_of_discussion_sentences():
     print('\nFor better visualization effect, check the R code given in the above comment block\n')
