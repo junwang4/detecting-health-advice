@@ -1,9 +1,25 @@
+This is a collaborative project with the School of Information at Syracuse University. 
+Health and medical researchers often give clinical and policy recommendations to inform health practice and public health policy. 
+However, no current health information system supports the direct retrieval of health advice. This study fills the gap by developing and validating an NLP-based prediction model for identifying health advice in research publications. 
+
+### How to cite
+Li, Y., Wang, J. and Yu, B (2021).
+Detecting Health Advice in Medical Research Literature.
+EMNLP'2021. 7th-11th November 2021.
+Online and in the Dominican Republic.
+
+```
+@inproceedings{li2021EMNLPHealthAdvice,
+  title={Detecting Health Advice in Medical Research Literature},
+  author={Li, Yingya and Wang, Jun and Yu, Bei},
+  booktitle={Proceedings of EMNLP'2021},
+  year={2021},
+}
+```
+
 **NOTE**: Our running environment is 
 ```
-Ubuntu: 16.04
-PyTorch: 1.8.2 
-CUDA: 10.1
-GPU: TITAN Xp
+Ubuntu: 16.04 / PyTorch: 1.8.2 / CUDA: 10.1 / GPU: TITAN Xp
 ```
 
 ### STEP 1. Prerequisite
